@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item List</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Add Item</h2>
+    <form action="/add/" method="post">
+        <input type="text" name="name" required>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Delete Item</h2>
+    <form action="/delete/" method="post">
+        <input type="text" name="name" required>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
