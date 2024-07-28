@@ -4,4 +4,4 @@ class Item(BaseModel):
     name: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # Use 'from_attributes' instead of 'orm_mode'
