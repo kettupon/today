@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Item List</title>
+    <script>
+        var ws = new WebSocket("ws://localhost:8000/ws"); // Update the URL to match your server's URL
+        ws.onmessage = function(event) {
+            alert(event.data); // This can be customized to update the DOM instead
+            location.reload();  // Reload the page to fetch the latest data
+        };
+    </script>
 </head>
 <body>
     <h1>Item List</h1>
